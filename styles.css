@@ -1,129 +1,109 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
+    box-sizing: border-box;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 2rem;
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    transition: background-color 0.3s ease;
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+.navbar.transparent {
+    background-color: rgba(0, 0, 0, 0); /* Transparente en la sección Home */
 }
 
-nav ul li {
-    margin-left: 2rem;
+.navbar.solid {
+    background-color: rgba(0, 0, 0, 0.8); /* Color sólido al salir de Home */
 }
 
-nav ul li a {
-    color: #fff;
+.navbar a {
+    color: white;
     text-decoration: none;
-    font-size: 1.1rem;
-}
-
-#hero {
-    background-image: url('imgs/pic.jpg'); /* Ruta local de la imagen */
-    background-size: cover; /* La imagen cubrirá todo el bloque */
-    background-position: center; /* Centra la imagen en el bloque */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    height: 100vh; /* El bloque tendrá la altura de la ventana del navegador */
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white; /* Color del texto, puedes cambiarlo según la imagen de fondo */
-  }
-  
-#hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-#hero button {
-    padding: 0.75rem 2rem;
-    font-size: 1.2rem;
-    color: #333;
-    background-color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#hero button:hover {
-    background-color: #ddd;
-}
-
-section {
-    padding: 4rem 2rem;
-    margin: 2rem auto;
-    max-width: 1000px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    color: #333;
-    margin-bottom: 1.5rem;
-}
-
-#projects .project {
-    margin-bottom: 2rem;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form label {
-    margin-bottom: 0.5rem;
+    padding: 10px 20px;
     font-weight: bold;
 }
 
-form input, form textarea {
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+.navbar a:hover {
+    color: #ff6347;
 }
 
-form button {
-    padding: 0.75rem;
-    font-size: 1.2rem;
-    color: #fff;
-    background-color: #333;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
+.navbar-left a {
+    font-size: 1.5rem;
 }
 
-form button:hover {
-    background-color: #555;
+.navbar-right a {
+    margin-left: 20px;
 }
 
-footer {
+#home-section {
+    position: relative;
+    height: 100vh;
+}
+
+/* Estilos para las secciones */
+#about-section, #projects-section, #contact-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
-    padding: 1rem;
-    background-color: #333;
-    color: #fff;
-    margin-top: 2rem;
 }
 
+#about-section {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+#projects-section {
+    background-color: #2b2b2b;
+    color: white;
+}
+
+#contact-section {
+    background-color: #3a3a3a;
+    color: white;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    color: white;
+}
+
+header h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    width: 80%;
+    margin: 0 auto;
+}
